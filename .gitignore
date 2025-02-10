@@ -1,0 +1,32 @@
+# Ignore IDEA project files
+*.iml
+**/.idea/
+# Ignore build directories
+*/bin/
+*/out/
+*/target/
+
+# Ignore compiled Java classes
+*.class
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore Maven and Gradle specific files
+.mvn/
+.gradle/
+
+# Ignore dependency caches
+**/.gradle
+**/build
+!gradle/wrapper/gradle-wrapper.jar
+
+# Ignore Eclipse project files (if applicable)
+.project
+.classpath
+.settings/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
