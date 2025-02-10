@@ -5,7 +5,7 @@
 */bin/
 */out/
 */target/
-
+generate_readme.py
 # Ignore compiled Java classes
 *.class
 
