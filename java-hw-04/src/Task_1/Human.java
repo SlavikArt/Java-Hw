@@ -13,7 +13,7 @@ public class Human {
         return children;
     }
 
-    public String getName() {
-        return name;
+    public String getInfo() {
+        return "Ім'я: " + name + ", Діти: " + children;
     }
 }

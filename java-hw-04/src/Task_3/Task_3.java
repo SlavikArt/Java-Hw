@@ -2,29 +2,28 @@ package Task_3;
 
 public class Task_3 {
     public static void main(String[] args) {
-        Animal[] zoo = new Animal[4];
-        zoo[0] = new Tiger();
-        zoo[1] = new Rabbit();
-        zoo[2] = new Wolf();
-        zoo[3] = new Kangaroo();
-
-        System.out.print("Тварини в зоопарку: ");
-        for (int i = 0; i < zoo.length; i++) {
-            System.out.print(zoo[i].getName());
-            if (i < zoo.length - 1)
-                System.out.print(", ");
-        }
-        System.out.println();
+        Animal[] zoo = {
+                new Tiger(),
+                new Rabbit(),
+                new Wolf(),
+                new Kangaroo()
+        };
 
         int predators = 0;
-        double totalFood = 0;
+        double meatFood = 0;
+        double plantFood = 0;
+
         for (int i = 0; i < zoo.length; i++) {
-            if (zoo[i].isPredator())
+            System.out.println(zoo[i].getInfo());
+            if (zoo[i].isPredator()) {
                 predators++;
-            totalFood += zoo[i].getFoodAmount();
+                meatFood += zoo[i].getFoodAmount();
+            } else
+                plantFood += zoo[i].getFoodAmount();
         }
 
-        System.out.println("Кількість хижаків: " + predators);
-        System.out.println("Загальний обсяг корму: " + totalFood);
+        System.out.println("\nКількість хижаків: " + predators);
+        System.out.println("Загальний обсяг м'яса: " + meatFood);
+        System.out.println("Загальний обсяг рослинної їжі: " + plantFood);
     }
 }
