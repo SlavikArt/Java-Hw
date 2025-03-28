@@ -7,3 +7,4 @@
 * [Homework 4-1 ---> java-hw-04-1](./java-hw-04-1/)
 * [Homework 5 ---> java-hw-05](./java-hw-05)
 * [Homework 5-1 ---> java-hw-05-1](./java-hw-05-1/)
+* [Homework 6 ---> java-hw-06](./java-hw-06/)
