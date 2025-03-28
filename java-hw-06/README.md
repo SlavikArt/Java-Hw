@@ -32,7 +32,7 @@
 <img src="./screenshots/2.png" alt="screenshot 2.png" width="400"/>
 
 ### Task_3
-_int[] numbers = {3, -5, 7, 7, -2, 0, 4, -8, 10};_
+#### _int[] numbers = {3, -5, 7, 7, -2, 0, 4, -8, 10};_
 <img src="./screenshots/3.png" alt="screenshot 3.png" width="400"/>
 
 ### Task_4
