@@ -1,4 +1,4 @@
-# Java | Homework 1
+# Java | Homework 5-1
 
 ## Tasks
 
@@ -40,6 +40,6 @@
 
 ### Task_3
 
-<img src="./screenshots/3.1.png" alt="screenshot 3.1.png" width="400"/>
+<img src="./screenshots/3.1.png" alt="screenshot 3.1.png" width="800"/>
 
-<img src="./screenshots/3.2.png" alt="screenshot 3.2.png" width="400"/>
+<img src="./screenshots/3.2.png" alt="screenshot 3.2.png" width="800"/>
