@@ -1,4 +1,4 @@
-# Java | Homework 5-1
+# Java | Homework 1
 
 ## Tasks
 
@@ -12,6 +12,11 @@
 * [Task_2](./src/Task_2/)
     - [Dictionary.java](./src/Task_2/Dictionary.java)
     - [Task_2.java](./src/Task_2/Task_2.java)
+* [Task_3](./src/Task_3/)
+    - [Fine.java](./src/Task_3/Fine.java)
+    - [Person.java](./src/Task_3/Person.java)
+    - [Task_3.java](./src/Task_3/Task_3.java)
+    - [TaxDatabase.java](./src/Task_3/TaxDatabase.java)
 
 ## Screenshots
 
@@ -32,3 +37,9 @@
 <img src="./screenshots/2.2.png" alt="screenshot 2.2.png" width="400"/>
 
 <img src="./screenshots/2.3.png" alt="screenshot 2.3.png" width="400"/>
+
+### Task_3
+
+<img src="./screenshots/3.1.png" alt="screenshot 3.1.png" width="400"/>
+
+<img src="./screenshots/3.2.png" alt="screenshot 3.2.png" width="400"/>
