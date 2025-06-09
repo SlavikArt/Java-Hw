@@ -1,0 +1,195 @@
+### Variables
+@baseUrl = http://localhost:8080/api
+@contentType = application/json
+
+### Create a new client
+POST {{baseUrl}}/clients
+Content-Type: {{contentType}}
+
+{
+    "fullName": "John Doe",
+    "phone": "+380501234567"
+}
+
+### Create another client
+POST {{baseUrl}}/clients
+Content-Type: {{contentType}}
+
+{
+    "fullName": "Jane Smith",
+    "phone": "+380672345678"
+}
+
+### Get all clients
+GET {{baseUrl}}/clients
+
+### Search clients
+GET {{baseUrl}}/clients/search?query=John
+
+### Create a landlord
+POST {{baseUrl}}/landlords
+Content-Type: {{contentType}}
+
+{
+    "fullName": "Mike Johnson",
+    "phone": "+380633456789"
+}
+
+### Create landlord
+POST {{baseUrl}}/landlords
+Content-Type: {{contentType}}
+
+{
+    "fullName": "Sarah Wilson",
+    "phone": "+380504567890"
+}
+
+### Get all landlords
+GET {{baseUrl}}/landlords
+
+### Get top 10 landlords
+GET {{baseUrl}}/landlords/top10
+
+### Get landlord statistics
+GET {{baseUrl}}/landlords/stats/avg-apartments
+GET {{baseUrl}}/landlords/stats/avg-rented
+GET {{baseUrl}}/landlords/stats/max-apartments
+
+### Create an apartment
+POST {{baseUrl}}/apartments
+Content-Type: {{contentType}}
+
+{
+    "address": "123 Main St",
+    "district": "Downtown",
+    "rooms": 2,
+    "price": 1000.00,
+    "landlord": {
+        "id": 1
+    }
+}
+
+### Create apartment
+POST {{baseUrl}}/apartments
+Content-Type: {{contentType}}
+
+{
+    "address": "456 Park Ave",
+    "district": "Uptown",
+    "rooms": 3,
+    "price": 1500.00,
+    "landlord": {
+        "id": 1
+    }
+}
+
+### Get available apartments
+GET {{baseUrl}}/apartments/available
+
+### Get apartments by price range
+GET {{baseUrl}}/apartments/price-range?minPrice=800&maxPrice=1200
+
+### Get apartment statistics
+GET {{baseUrl}}/apartments/stats/available-count
+GET {{baseUrl}}/apartments/stats/rented-count
+
+### Create a rental
+POST {{baseUrl}}/rentals
+Content-Type: {{contentType}}
+
+{
+    "client": {
+        "id": 1
+    },
+    "apartment": {
+        "id": 1
+    },
+    "startDate": "2024-01-01",
+    "endDate": "2024-12-31"
+}
+
+### Create rental
+POST {{baseUrl}}/rentals
+Content-Type: {{contentType}}
+
+{
+    "client": {
+        "id": 2
+    },
+    "apartment": {
+        "id": 2
+    },
+    "startDate": "2024-02-01",
+    "endDate": "2024-11-30"
+}
+
+### Get all rentals
+GET {{baseUrl}}/rentals
+
+### Get rentals ending this month
+GET {{baseUrl}}/rentals/ending-this-month
+
+### Get rentals this month
+GET {{baseUrl}}/rentals/this-month
+
+### Get active rentals for apartment
+GET {{baseUrl}}/rentals/apartment/1/active
+
+### Update a client
+PUT {{baseUrl}}/clients/1
+Content-Type: {{contentType}}
+
+{
+    "fullName": "John Updated Doe",
+    "phone": "+380501234567"
+}
+
+### Update a landlord
+PUT {{baseUrl}}/landlords/1
+Content-Type: {{contentType}}
+
+{
+    "fullName": "Mike Updated Johnson",
+    "phone": "+380633456789"
+}
+
+### Update an apartment
+PUT {{baseUrl}}/apartments/1
+Content-Type: {{contentType}}
+
+{
+    "address": "123 Updated Main St",
+    "district": "Downtown",
+    "rooms": 2,
+    "price": 1100.00,
+    "landlord": {
+        "id": 1
+    }
+}
+
+### Update a rental
+PUT {{baseUrl}}/rentals/1
+Content-Type: {{contentType}}
+
+{
+    "client": {
+        "id": 1
+    },
+    "apartment": {
+        "id": 1
+    },
+    "startDate": "2024-01-01",
+    "endDate": "2024-12-31"
+}
+
+### Delete a rental
+DELETE {{baseUrl}}/rentals/1
+
+### Delete an apartment
+DELETE {{baseUrl}}/apartments/1
+
+### Delete a landlord
+DELETE {{baseUrl}}/landlords/1
+
+### Delete a client
+DELETE {{baseUrl}}/clients/1 
