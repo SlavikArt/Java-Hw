@@ -6,6 +6,7 @@
 */out/
 */target/
 generate_readme.py
+generate_readme2.py
 # Ignore compiled Java classes
 *.class
 
