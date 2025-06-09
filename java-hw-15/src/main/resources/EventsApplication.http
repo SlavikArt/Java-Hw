@@ -1,0 +1,128 @@
+### Create a new place and event
+POST http://localhost:8080/api/events
+Content-Type: application/json
+
+{
+    "name": "Rock Concert",
+    "eventDate": "2024-04-15",
+    "place": {
+        "name": "Stadium Arena",
+        "address": "123 Music Street"
+    },
+    "ticketPacks": [
+        {
+            "cost": 100.0,
+            "count": 50
+        },
+        {
+            "cost": 200.0,
+            "count": 20
+        }
+    ]
+}
+
+### Create another event
+POST http://localhost:8080/api/events
+Content-Type: application/json
+
+{
+    "name": "Jazz Festival",
+    "eventDate": "2024-04-20",
+    "place": {
+        "name": "Jazz Club",
+        "address": "456 Jazz Avenue"
+    },
+    "ticketPacks": [
+        {
+            "cost": 150.0,
+            "count": 30
+        },
+        {
+            "cost": 250.0,
+            "count": 15
+        }
+    ]
+}
+
+### Create a customer
+POST http://localhost:8080/api/customers?name=John%20Doe&email=john@example.com&phone=1234567890
+
+### Create customer
+POST http://localhost:8080/api/customers?name=Jane%20Smith&email=jane@example.com&phone=9876543210
+
+### Purchase a ticket (replace {customerId} and {ticketId} with actual IDs)
+POST http://localhost:8080/api/customers/1/tickets/1/purchase
+
+### Get available events for a specific date
+GET http://localhost:8080/api/events/available?date=2024-04-15
+
+### Get events by organizer
+GET http://localhost:8080/api/events/organizer/Jazz%20Club
+
+### Get events by place (replace {placeId} with actual ID)
+GET http://localhost:8080/api/events/place/1
+
+### Get almost sold out events
+GET http://localhost:8080/api/events/almost-sold-out
+
+### Get sold out events ordered by profit
+GET http://localhost:8080/api/events/sold-out
+
+### Create an event with many tickets to test almost sold out
+POST http://localhost:8080/api/events
+Content-Type: application/json
+
+{
+    "name": "Pop Concert",
+    "eventDate": "2024-05-01",
+    "place": {
+        "name": "City Hall",
+        "address": "789 Main Street"
+    },
+    "ticketPacks": [
+        {
+            "cost": 80.0,
+            "count": 100
+        }
+    ]
+}
+
+### Create a sold out event
+POST http://localhost:8080/api/events
+Content-Type: application/json
+
+{
+    "name": "VIP Party",
+    "eventDate": "2024-05-15",
+    "place": {
+        "name": "Luxury Hotel",
+        "address": "321 VIP Lane"
+    },
+    "ticketPacks": [
+        {
+            "cost": 500.0,
+            "count": 10
+        }
+    ]
+}
+
+### Purchase all tickets for VIP Party (replace {customerId} and {ticketId} with actual IDs)
+POST http://localhost:8080/api/customers/1/tickets/11/purchase
+###
+POST http://localhost:8080/api/customers/1/tickets/12/purchase
+###
+POST http://localhost:8080/api/customers/1/tickets/13/purchase
+###
+POST http://localhost:8080/api/customers/1/tickets/14/purchase
+###
+POST http://localhost:8080/api/customers/1/tickets/15/purchase
+###
+POST http://localhost:8080/api/customers/1/tickets/16/purchase
+###
+POST http://localhost:8080/api/customers/1/tickets/17/purchase
+###
+POST http://localhost:8080/api/customers/1/tickets/18/purchase
+###
+POST http://localhost:8080/api/customers/1/tickets/19/purchase
+###
+POST http://localhost:8080/api/customers/1/tickets/20/purchase
